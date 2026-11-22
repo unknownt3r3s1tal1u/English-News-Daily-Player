@@ -1,0 +1,138 @@
+{
+  "date": "2026-11-22",
+  "items": [
+    {
+      "title": "GPT-6.2 Astra and Sol are available in ChatGPT Work and Codex.",
+      "summary": [
+        "Official announcement: 17 November 2026.",
+        "OpenAI announced availability of GPT-6.2 Astra and Sol in ChatGPT Work, Codex and the API for eligible users.",
+        "The release broadens access to models intended for professional work, coding and agentic workflows."
+      ],
+      "why": "This can change how teams prototype, analyse information and automate repeatable knowledge work.",
+      "language": [
+        {
+          "term": "Be available to eligible users.",
+          "example": "The new assessment platform will be available to eligible hiring teams next quarter."
+        },
+        {
+          "term": "Expand access to.",
+          "example": "The company plans to expand access to AI sourcing tools across its regional offices."
+        },
+        {
+          "term": "At less than half the cost per task.",
+          "example": "The new workflow delivers similar output at less than half the cost per task."
+        }
+      ]
+    },
+    {
+      "title": "Anthropic’s Residency is accepting applications from established technical leaders.",
+      "summary": [
+        "Current application deadline: 22 November 2026.",
+        "Anthropic’s paid, fixed-term Residency programme targets technical leaders who want to move into empirical AI-safety research.",
+        "It welcomes adjacent quantitative and engineering backgrounds, and prior machine-learning experience is not required."
+      ],
+      "why": "It reflects continued competition for transferable technical talent, not only conventionally trained AI researchers.",
+      "language": [
+        {
+          "term": "Transition into.",
+          "example": "She hopes to transition into an AI-platform role from payments engineering."
+        },
+        {
+          "term": "A fixed-term programme.",
+          "example": "The company offers a fixed-term programme for experienced engineers exploring research roles."
+        },
+        {
+          "term": "Prior experience is not required.",
+          "example": "For this graduate role, prior experience in e-commerce is not required."
+        }
+      ]
+    },
+    {
+      "title": "Amazon Saudi Arabia has launched a 12-day White Friday sale.",
+      "summary": [
+        "Campaign reported active on 22 November 2026.",
+        "Amazon Saudi Arabia has begun a 12-day White Friday campaign that combines promotional pricing with Prime-related delivery and entertainment benefits.",
+        "It shows how marketplaces package commercial offers and fulfilment propositions during a peak retail period."
+      ],
+      "why": "Retail-tech teams must prepare pricing, inventory, checkout and last-mile services for promotional demand spikes.",
+      "language": [
+        {
+          "term": "A peak shopping period.",
+          "example": "The operations team increased on-call coverage for the peak shopping period."
+        },
+        {
+          "term": "Promotional pricing.",
+          "example": "Promotional pricing must be reflected consistently across the app and checkout flow."
+        },
+        {
+          "term": "Package A together with B.",
+          "example": "The brand packages fast delivery together with exclusive member benefits."
+        }
+      ]
+    },
+    {
+      "title": "UK labour-market data show softer hiring conditions.",
+      "summary": [
+        "ONS release: 17 November 2026.",
+        "The Office for National Statistics reported a mixed UK labour-market picture: employment rose and unemployment fell in the latest quarter, while payroll employment and vacancies declined.",
+        "Smaller businesses cited higher labour and operating costs as factors affecting hiring."
+      ],
+      "why": "Recruiters should separate headline employment figures from near-term vacancy demand and employer cost pressure.",
+      "language": [
+        {
+          "term": "A mixed picture.",
+          "example": "The latest hiring data presents a mixed picture across different functions."
+        },
+        {
+          "term": "Affect hiring decisions.",
+          "example": "Higher operating costs may affect hiring decisions in smaller companies."
+        },
+        {
+          "term": "Be concentrated in.",
+          "example": "The decline in vacancies was concentrated in administrative and support roles."
+        }
+      ]
+    },
+    {
+      "title": "EU product-identifier requirements are now operational for import distance sales.",
+      "summary": [
+        "Mandatory product identifiers took effect on 1 November 2026.",
+        "EU guidance states that product identifiers must now be declared for relevant import distance sales.",
+        "Generic product descriptions are no longer sufficient."
+      ],
+      "why": "Cross-border e-commerce platforms need reliable product-data flows, validation and compliance ownership across sellers, marketplaces and customs operations.",
+      "language": [
+        {
+          "term": "Come into effect.",
+          "example": "The new product-data requirement came into effect this month."
+        },
+        {
+          "term": "Be subject to.",
+          "example": "Cross-border shipments may be subject to additional customs checks."
+        },
+        {
+          "term": "Capture and transmit data.",
+          "example": "The platform must capture and transmit product data accurately."
+        }
+      ]
+    }
+  ],
+  "further": [
+    {
+      "term": "Remain in the current news cycle.",
+      "example": "The announcement remains in the current news cycle because the application deadline is today."
+    },
+    {
+      "term": "Operate under peak load.",
+      "example": "The payment service must operate reliably under peak load during major campaigns."
+    },
+    {
+      "term": "Maintain a single source of truth.",
+      "example": "The hiring team should maintain a single source of truth for candidate status."
+    },
+    {
+      "term": "Build in compliance checks.",
+      "example": "The product team should build in compliance checks before launching in a new market."
+    }
+  ]
+}
