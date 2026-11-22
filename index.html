@@ -5,48 +5,31 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>English News Daily · Listen</title>
 <style>
-:root{--ink:#14243a;--blue:#1769d1;--bg:#f5f8fc;--line:#e2e8f1}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}header{background:linear-gradient(125deg,#0b2a4a,#1769d1);color:#fff;padding:3rem max(1.2rem,calc((100vw - 1040px)/2))}h1{margin:0;font-size:clamp(2rem,5vw,3.2rem);line-height:1.1}header p{max-width:680px;opacity:.88}main{max-width:1040px;margin:auto;padding:2rem 1.2rem 4rem}.bar{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.2rem}.voicebar{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;margin:0 0 1.2rem}.voicebar label{font-weight:700}.voicebar select{max-width:100%;padding:.55rem .7rem;border:1px solid #c8d5e5;border-radius:.55rem;background:#fff;font:inherit;color:var(--ink)}button{border:1px solid #c8d5e5;background:#fff;color:#0b2a4a;font:inherit;font-weight:700;padding:.55rem .8rem;border-radius:.55rem;cursor:pointer}button:hover{border-color:var(--blue);color:var(--blue)}.primary{background:var(--blue);color:#fff;border-color:var(--blue)}.card{background:#fff;border:1px solid var(--line);border-radius:1rem;padding:1.25rem;margin:1rem 0;box-shadow:0 3px 14px #12243a0a}.card h2{margin:0 0 .8rem;font-size:1.25rem;line-height:1.35}.label{margin-top:1rem;color:var(--blue);font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.line{display:flex;gap:.75rem;align-items:flex-start;border-top:1px solid #edf1f6;padding:.6rem 0}.line p{margin:0}.play{padding:.32rem .55rem;white-space:nowrap}.note{color:#65768b;font-size:.9rem}.date{background:#e8f0fe;border-color:var(--blue)}@media(max-width:580px){header{padding:2.3rem 1.2rem}.card{padding:1rem}}
+:root{--ink:#14243a;--blue:#1769d1;--bg:#f5f8fc;--line:#e2e8f1}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}header{background:linear-gradient(125deg,#0b2a4a,#1769d1);color:#fff;padding:3rem max(1.2rem,calc((100vw - 1040px)/2))}h1{margin:0;font-size:clamp(2rem,5vw,3.2rem);line-height:1.1}header p{max-width:720px;opacity:.88}main{max-width:1040px;margin:auto;padding:2rem 1.2rem 4rem}.bar{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.2rem}button{border:1px solid #c8d5e5;background:#fff;color:#0b2a4a;font:inherit;font-weight:700;padding:.55rem .8rem;border-radius:.55rem;cursor:pointer}button:hover{border-color:var(--blue);color:var(--blue)}.primary{background:var(--blue);color:#fff;border-color:var(--blue)}.card{background:#fff;border:1px solid var(--line);border-radius:1rem;padding:1.25rem;margin:1rem 0;box-shadow:0 3px 14px #12243a0a}.card h2{margin:0 0 .8rem;font-size:1.25rem;line-height:1.35}.label{margin-top:1rem;color:var(--blue);font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.line{display:flex;gap:.75rem;align-items:flex-start;border-top:1px solid #edf1f6;padding:.6rem 0}.line p{margin:0;flex:1}.line audio{height:2rem;max-width:15rem}.note{color:#65768b;font-size:.9rem}.date{background:#e8f0fe;border-color:var(--blue)}@media(max-width:580px){header{padding:2.3rem 1.2rem}.card{padding:1rem}.line{align-items:stretch;flex-direction:column}.line audio{width:100%;max-width:none}}
 </style>
 </head>
 <body>
 <header>
 <h1>English News Daily</h1>
-<p>Choose a voice you like, then click any button to hear natural American English. Full-briefing playback keeps sentences together for connected speech and shadowing practice.</p>
+<p>Every title, sentence, expression and example has a real American-English audio file. Play it directly on this page for connected-speech and shadowing practice.</p>
 </header>
 <main>
 <div class="bar"><div id="dates"></div><div><button id="all" class="primary">▶ Play full briefing</button> <button id="stop">■ Stop</button></div></div>
-<div class="voicebar"><label for="voice">Voice</label><select id="voice" aria-label="American English voice"></select><button id="preview">▶ Preview voice</button></div>
-<p id="voice-note" class="note">Loading available American English voices from your device…</p>
+<p class="note">Voice: Microsoft Jenny Neural (en-US), generated as MP3. Audio plays in this page and does not depend on your browser’s default voice.</p>
 <div id="content"></div>
 </main>
 <script>
-let queue=[],pos=0,playing=false,voices=[];
-const voiceSelect=document.querySelector('#voice'),voiceNote=document.querySelector('#voice-note');
-const preferred=['microsoft jenny','microsoft aria','samantha','ava','zira','google us english','microsoft guy','david'];
-const getVoice=()=>voices.find(v=>v.voiceURI===voiceSelect.value);
-function rank(v){const n=v.name.toLowerCase();const i=preferred.findIndex(x=>n.includes(x));return i<0?99+i:i}
-function populateVoices(){
-  const chosen=localStorage.getItem('end-voice');
-  voices=speechSynthesis.getVoices().filter(v=>/^en[-_]US$/i.test(v.lang)).sort((a,b)=>rank(a)-rank(b)||a.name.localeCompare(b.name));
-  voiceSelect.innerHTML='';
-  if(!voices.length){voiceSelect.innerHTML='<option>American English voice unavailable</option>';voiceSelect.disabled=true;voiceNote.textContent='No American-English voice is available in this browser. Try Safari, Edge or Chrome with a system English voice installed.';return}
-  voiceSelect.disabled=false;
-  voices.forEach((v,i)=>{const o=document.createElement('option');o.value=v.voiceURI;o.textContent=(i===0?'Recommended — ':'')+v.name;o.selected=v.voiceURI===(chosen||voices[0].voiceURI);voiceSelect.append(o)});
-  const v=getVoice();voiceNote.textContent='Using '+v.name+' ('+v.lang+'). Your selection is saved on this device.';
-}
-voiceSelect.onchange=()=>{localStorage.setItem('end-voice',voiceSelect.value);populateVoices()};
-speechSynthesis.onvoiceschanged=populateVoices;populateVoices();
-function makeUtterance(text){const u=new SpeechSynthesisUtterance(text),v=getVoice();u.lang='en-US';u.rate=.93;u.pitch=1;if(v)u.voice=v;return u}
-function say(text){playing=false;speechSynthesis.cancel();speechSynthesis.speak(makeUtterance(text))}
-document.querySelector('#preview').onclick=()=>say('Hello. This is your selected American English voice for today’s business news briefing.');
+let playlist=[],position=0,fullPlayer=null,playing=false;
 const el=(tag,cls,txt)=>{const x=document.createElement(tag);if(cls)x.className=cls;if(txt)x.textContent=txt;return x};
-function row(t){const x=el('div','line'),b=el('button','play','▶ Play'),p=el('p','',t);b.onclick=()=>say(t);x.append(b,p);return x}
-function group(title,lines){const w=document.createElement('div');w.append(el('div','label',title));lines.forEach(t=>w.append(row(t)));return w}
-function render(d){const root=document.querySelector('#content');root.innerHTML='';queue=[];d.items.forEach((s,i)=>{const c=el('article','card'),h=el('h2','',(i+1)+'. '+s.title);c.append(h,group('Summary',s.summary),group('Why it matters',[s.why]),group('Language points',s.language.flatMap(x=>[x.term,x.example])));root.append(c);queue.push(s.title,...s.summary,s.why,...s.language.flatMap(x=>[x.term,x.example]))});const c=el('article','card');c.append(el('h2','','Further language notes'),group('More to practise',d.further.flatMap(x=>[x.term,x.example])));root.append(c);queue.push(...d.further.flatMap(x=>[x.term,x.example]))}
-function next(){if(!playing||pos>=queue.length){playing=false;return}const u=makeUtterance(queue[pos++]);u.onend=next;u.onerror=next;speechSynthesis.speak(u)}
-document.querySelector('#all').onclick=()=>{speechSynthesis.cancel();pos=0;playing=true;next()};
-document.querySelector('#stop').onclick=()=>{playing=false;speechSynthesis.cancel()};
-fetch('data/index.json').then(r=>r.json()).then(x=>{x.dates.forEach((d,i)=>{const b=el('button',i?'':'date',d);b.onclick=()=>fetch('data/'+d+'.json').then(r=>r.json()).then(render);document.querySelector('#dates').append(b)});return fetch('data/'+x.dates[0]+'.json')}).then(r=>r.json()).then(render);
+const audioPath=(date,index)=>'audio/'+date+'/'+String(index).padStart(3,'0')+'.mp3';
+function stop(){playing=false;if(fullPlayer){fullPlayer.pause();fullPlayer=null}document.querySelectorAll('audio').forEach(a=>a.pause())}
+function row(text,src){const x=el('div','line'),p=el('p','',text),a=document.createElement('audio');a.controls=true;a.preload='none';a.src=src;a.setAttribute('aria-label','Play: '+text);x.append(p,a);return x}
+function group(title,lines,add){const w=document.createElement('div');w.append(el('div','label',title));lines.forEach(t=>w.append(row(t,add(t))));return w}
+function render(data){stop();const root=document.querySelector('#content');root.innerHTML='';playlist=[];let n=0;const take=t=>{const src=audioPath(data.date,n++);playlist.push(src);return src};data.items.forEach((s,i)=>{const c=el('article','card'),h=el('h2','',(i+1)+'. '+s.title);c.append(h,row(s.title,take(s.title)),group('Summary',s.summary,take),group('Why it matters',[s.why],take),group('Language points',s.language.flatMap(x=>[x.term,x.example]),take));root.append(c)});const c=el('article','card');c.append(el('h2','','Further language notes'),group('More to practise',data.further.flatMap(x=>[x.term,x.example]),take));root.append(c)}
+function next(){if(!playing||position>=playlist.length){playing=false;fullPlayer=null;return}fullPlayer=new Audio(playlist[position++]);fullPlayer.onended=next;fullPlayer.onerror=next;fullPlayer.play().catch(()=>{playing=false})}
+document.querySelector('#all').onclick=()=>{stop();position=0;playing=true;next()};
+document.querySelector('#stop').onclick=stop;
+fetch('data/index.json').then(r=>r.json()).then(index=>{index.dates.forEach((date,i)=>{const b=el('button',i?'':'date',date);b.onclick=()=>fetch('data/'+date+'.json').then(r=>r.json()).then(render);document.querySelector('#dates').append(b)});return fetch('data/'+index.dates[0]+'.json')}).then(r=>r.json()).then(render);
 </script>
 </body>
 </html>
