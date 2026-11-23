@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-23",
+  "items": [
+    {
+      "title": "OpenAI’s chief scientist proposes a shared safety benchmark for frontier models.",
+      "summary": [
+        "Published on 22 November 2026.",
+        "OpenAI Chief Scientist Jakub Pachocki argues that pretraining perplexity, or cross-entropy loss, can serve as a comparable measure of model progress across developers.",
+        "He proposes common capability limits that developers would not cross until specified monitoring and safety milestones are met."
+      ],
+      "why": "If developers converge on comparable capability and monitoring metrics, AI teams may need to treat evaluation, governance and deployment readiness as linked operating requirements rather than separate workstreams.",
+      "language": [
+        {"term": "Establish a common yardstick.", "example": "The hiring team needs to establish a common yardstick before comparing candidates across markets."},
+        {"term": "Tie A to B.", "example": "We should tie promotion decisions to measurable delivery outcomes."},
+        {"term": "Refrain from doing something.", "example": "The team agreed to refrain from expanding the pilot until the security review is complete."}
+      ]
+    },
+    {
+      "title": "Rezolve Ai reports conversion gains at Irish retailer Intersport Elverys.",
+      "summary": [
+        "Company news release: 20 November 2026.",
+        "Rezolve Ai said that Intersport Elverys grew online revenue by 42% and online conversion by 58% after deploying its search and merchandising technology.",
+        "The figures are company-reported results, rather than independently audited industry data."
+      ],
+      "why": "The announcement is a concrete, although vendor-reported, example of how AI search and merchandising are being positioned as measurable levers for retail conversion rather than only customer-experience features.",
+      "language": [
+        {"term": "Lift conversion.", "example": "The new product finder is designed to lift conversion without increasing paid-media spend."},
+        {"term": "Attribute a result to.", "example": "The business attributed the improvement in response time to a redesigned triage process."},
+        {"term": "A vendor-reported result.", "example": "Treat the 30% uplift as a vendor-reported result until the retailer confirms the methodology."}
+      ]
+    },
+    {
+      "title": "Meituan unveils its cable-lowering delivery drone in Dubai.",
+      "summary": [
+        "Company announcement: 18 November 2026.",
+        "Meituan said its fourth-generation M-Drone 4L made its first overseas appearance in Dubai and can lower orders by cable without landing.",
+        "The company said a cable-lowering route is expected to enter service soon in locations including Sobha Hartland."
+      ],
+      "why": "The move shows the next operational challenge for last-mile technology: adapting a delivery method, not just a vehicle, to dense communities, outdoor locations and local aviation requirements.",
+      "language": [
+        {"term": "Make an overseas debut.", "example": "The company plans to make its overseas debut in the UAE before entering other Gulf markets."},
+        {"term": "Enter service.", "example": "The new fulfilment centre is scheduled to enter service before the summer peak."},
+        {"term": "Adapt A to B.", "example": "Retailers must adapt their delivery promise to local infrastructure and customer habits."}
+      ]
+    },
+    {
+      "title": "Amazon UAE joins the government’s essential-goods price platform.",
+      "summary": [
+        "Government announcement: 11 November 2026; the product-price records are live.",
+        "The UAE Ministry of Economy and Tourism said Amazon UAE became the first e-commerce retailer integrated into its Essential Goods Prices Platform.",
+        "The platform displays regularly updated price data and lets users compare essential-goods prices across participating physical retailers and Amazon.ae."
+      ],
+      "why": "This is a practical example of public-sector price-transparency infrastructure expanding to marketplace data, increasing the importance of data quality, update frequency and technical standards for e-commerce operators.",
+      "language": [
+        {"term": "Be integrated into.", "example": "The supplier catalogue was integrated into the procurement platform last quarter."},
+        {"term": "Update data at regular intervals.", "example": "The dashboard must update data at regular intervals during a promotion."},
+        {"term": "Enable price comparisons.", "example": "Clear product attributes enable price comparisons across similar listings."}
+      ]
+    },
+    {
+      "title": "DoorDash is recruiting a senior technical recruiter for its robotics lab.",
+      "summary": [
+        "The official vacancy states that DoorDash expects to fill the role by 29 November 2026.",
+        "DoorDash’s Labs Robotics team is recruiting a Senior Technical Recruiter and asks for talent-market insight, data-informed influence with leadership and sourcing capability.",
+        "This is a live job listing, not a statement that a hire has already been made."
+      ],
+      "why": "The role illustrates how technical-recruiting positions in frontier operational technology are increasingly expected to combine sourcing execution with market intelligence and leadership advisory work.",
+      "language": [
+        {"term": "Influence leadership decisions.", "example": "Talent-market evidence can influence leadership decisions on location strategy."},
+        {"term": "A sourcing capability.", "example": "The new recruiter needs a strong sourcing capability for niche engineering profiles."},
+        {"term": "Be expected to be filled by.", "example": "The London role is expected to be filled by the end of the quarter."}
+      ]
+    }
+  ],
+  "further": [
+    {"term": "Be subject to independent verification.", "example": "The supplier’s performance claim is subject to independent verification."},
+    {"term": "Move from A to B.", "example": "The team is moving from manual reporting to automated exception management."},
+    {"term": "Set a threshold for.", "example": "We need to set a threshold for escalating candidate-risk issues."},
+    {"term": "At the point of deployment.", "example": "Compliance checks should be completed at the point of deployment, not afterwards."}
+  ]
+}
