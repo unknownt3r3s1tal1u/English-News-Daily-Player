@@ -1,0 +1,67 @@
+{
+  "date": "2026-11-24",
+  "items": [
+    {
+      "title": "TikTok reports a €5.5 billion contribution to Germany’s economy.",
+      "summary": [
+        "Published on 24 November 2026.",
+        "TikTok said a study commissioned from PF Global estimated that the platform contributed €5.5 billion in gross value added to the German economy in 2025 and supported 52,000 jobs.",
+        "The company also said the study estimated 420,000 job and apprenticeship discoveries through TikTok."
+      ],
+      "why": "The report is a useful signal that discovery platforms are increasingly being assessed not only as media channels, but as channels that connect retail demand, local businesses and talent attraction.",
+      "language": [
+        {"term": "Translate A into B.", "example": "The campaign translated online interest into qualified candidate applications."},
+        {"term": "A commissioned study.", "example": "Treat a commissioned study as useful evidence, while checking its methodology and sponsor."},
+        {"term": "Support job creation.", "example": "The new fulfilment site is expected to support job creation in the region."}
+      ]
+    },
+    {
+      "title": "TikTok Shop UK reports continued growth in LIVE shopping.",
+      "summary": [
+        "Published on 12 November 2026.",
+        "TikTok Shop UK said more than 6,000 LIVE Shopping sessions now take place each day and described LIVE as its fastest-growing shoppable format for businesses.",
+        "It reported that LIVE sales increased 55% year on year."
+      ],
+      "why": "The development highlights a shift from content-led discovery to real-time conversion, requiring retailers to coordinate creator operations, inventory availability and performance measurement more closely.",
+      "language": [
+        {"term": "A shoppable format.", "example": "The retailer is testing live video as a shoppable format for new product launches."},
+        {"term": "Convert interest into sales.", "example": "The team needs a clear path to convert interest into sales during a livestream."},
+        {"term": "Be platform-reported.", "example": "The growth figure is platform-reported and should be read alongside independent data."}
+      ]
+    },
+    {
+      "title": "OpenAI expands eligibility for Businesses in ChatGPT.",
+      "summary": [
+        "OpenAI updated the service on 19 November 2026.",
+        "E-commerce and online-service businesses outside the United States are now eligible to claim their business and publish Business Agents in ChatGPT.",
+        "Verified businesses can manage key information, add product feeds and review aggregated engagement insights."
+      ],
+      "why": "For online retailers, conversational discovery may become another channel where product data, availability and brand information need active operational ownership.",
+      "language": [
+        {"term": "Claim a business.", "example": "The retailer plans to claim its business before launching a new product feed."},
+        {"term": "Add a product feed.", "example": "The marketplace must add a product feed with current pricing and availability."},
+        {"term": "Be eligible to do something.", "example": "Only verified sellers are eligible to publish a customer-facing agent."}
+      ]
+    },
+    {
+      "title": "Northbeam is hiring a contract technical recruiter for e-commerce analytics.",
+      "summary": [
+        "The official listing gives an application deadline of 1 December 2026.",
+        "Northbeam is recruiting a Technical Recruiter on a three-to-six-month contract to support its marketing-intelligence platform for e-commerce brands.",
+        "The vacancy describes a business that uses AI to help brands operationalise data and turn insights into automated decisions."
+      ],
+      "why": "The role shows continuing demand for recruiters who can support data- and AI-oriented growth teams, especially where e-commerce analytics is central to commercial decision-making.",
+      "language": [
+        {"term": "Own full-cycle recruiting.", "example": "She will own full-cycle recruiting for data and platform-engineering roles."},
+        {"term": "Operationalise data.", "example": "The company is trying to operationalise data across its merchandising decisions."},
+        {"term": "A contract engagement.", "example": "The team opened a contract engagement to cover a temporary hiring surge."}
+      ]
+    }
+  ],
+  "further": [
+    {"term": "At the intersection of A and B.", "example": "This role sits at the intersection of retail operations and applied AI."},
+    {"term": "Create a clear path to.", "example": "The product team needs to create a clear path to checkout from every campaign page."},
+    {"term": "Work from a unified view of.", "example": "Recruiters should work from a unified view of candidate activity across markets."},
+    {"term": "Signal a shift in.", "example": "The new workflow may signal a shift in how retailers manage product discovery."}
+  ]
+}
