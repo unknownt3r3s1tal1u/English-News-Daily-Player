@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>English News Daily · Listen</title>
 <style>
-:root{--ink:#14243a;--blue:#1769d1;--bg:#f5f8fc;--line:#e2e8f1}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}header{background:linear-gradient(125deg,#0b2a4a,#1769d1);color:#fff;padding:3rem max(1.2rem,calc((100vw - 1040px)/2))}h1{margin:0;font-size:clamp(2rem,5vw,3.2rem);line-height:1.1}header p{max-width:720px;opacity:.88}main{max-width:1040px;margin:auto;padding:2rem 1.2rem 4rem}.bar{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.2rem}button{border:1px solid #c8d5e5;background:#fff;color:#0b2a4a;font:inherit;font-weight:700;padding:.55rem .8rem;border-radius:.55rem;cursor:pointer}button:hover{border-color:var(--blue);color:var(--blue)}.primary{background:var(--blue);color:#fff;border-color:var(--blue)}.card{background:#fff;border:1px solid var(--line);border-radius:1rem;padding:1.25rem;margin:1rem 0;box-shadow:0 3px 14px #12243a0a}.card h2{margin:0 0 .8rem;font-size:1.25rem;line-height:1.35}.label{margin-top:1rem;color:var(--blue);font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.line{display:flex;gap:.75rem;align-items:flex-start;border-top:1px solid #edf1f6;padding:.6rem 0}.line p{margin:0;flex:1}.line audio{height:2rem;max-width:15rem}.note{color:#65768b;font-size:.9rem}.date{background:#e8f0fe;border-color:var(--blue)}@media(max-width:580px){header{padding:2.3rem 1.2rem}.card{padding:1rem}.line{align-items:stretch;flex-direction:column}.line audio{width:100%;max-width:none}}
+:root{--ink:#14243a;--blue:#1769d1;--bg:#f5f8fc;--line:#e2e8f1}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}header{background:linear-gradient(125deg,#0b2a4a,#1769d1);color:#fff;padding:3rem max(1.2rem,calc((100vw - 1040px)/2))}h1{margin:0;font-size:clamp(2rem,5vw,3.2rem);line-height:1.1}header p{max-width:720px;opacity:.88}main{max-width:1040px;margin:auto;padding:2rem 1.2rem 4rem}.date-picker{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}.date-picker label{font-weight:700}.date-picker select{max-width:100%;border:1px solid #c8d5e5;background:#fff;color:#0b2a4a;font:inherit;padding:.55rem;border-radius:.55rem}.bar{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.2rem}button{border:1px solid #c8d5e5;background:#fff;color:#0b2a4a;font:inherit;font-weight:700;padding:.55rem .8rem;border-radius:.55rem;cursor:pointer}button:hover{border-color:var(--blue);color:var(--blue)}.primary{background:var(--blue);color:#fff;border-color:var(--blue)}.card{background:#fff;border:1px solid var(--line);border-radius:1rem;padding:1.25rem;margin:1rem 0;box-shadow:0 3px 14px #12243a0a}.card h2{margin:0 0 .8rem;font-size:1.25rem;line-height:1.35}.label{margin-top:1rem;color:var(--blue);font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.line{display:flex;gap:.75rem;align-items:flex-start;border-top:1px solid #edf1f6;padding:.6rem 0}.line p{margin:0;flex:1}.line audio{height:2rem;max-width:15rem}.note{color:#65768b;font-size:.9rem}.date{background:#e8f0fe;border-color:var(--blue)}@media(max-width:580px){header{padding:2.3rem 1.2rem}.card{padding:1rem}.line{align-items:stretch;flex-direction:column}.line audio{width:100%;max-width:none}}
 </style>
 </head>
 <body>
@@ -14,8 +14,9 @@
 <p>Every title, sentence, expression and example has a real American-English audio file. Play it directly on this page for connected-speech and shadowing practice.</p>
 </header>
 <main>
-<div class="bar"><div id="dates"></div><div><button id="all" class="primary">▶ Play full briefing</button> <button id="stop">■ Stop</button></div></div>
+<div class="bar"><div class="date-picker"><label for="dates">Briefing date</label><button id="older" type="button" aria-label="Older briefing">←</button><select id="dates" aria-label="Briefing date" disabled><option>Loading dates…</option></select><button id="newer" type="button" aria-label="Newer briefing">→</button></div><div><button id="all" class="primary">▶ Play full briefing</button> <button id="stop">■ Stop</button></div></div>
 <p class="note">Voice: Microsoft Jenny Neural (en-US), generated as MP3. Audio plays in this page and does not depend on your browser’s default voice.</p>
+<p id="status" class="note" role="status" aria-live="polite"></p>
 <div id="content"></div>
 </main>
 <script>
@@ -29,7 +30,15 @@ function render(data){stop();const root=document.querySelector('#content');root.
 function next(){if(!playing||position>=playlist.length){playing=false;fullPlayer=null;return}fullPlayer=new Audio(playlist[position++]);fullPlayer.onended=next;fullPlayer.onerror=next;fullPlayer.play().catch(()=>{playing=false})}
 document.querySelector('#all').onclick=()=>{stop();position=0;playing=true;next()};
 document.querySelector('#stop').onclick=stop;
-fetch('data/index.json',{cache:'no-store'}).then(r=>r.json()).then(index=>{index.dates.forEach((date,i)=>{const b=el('button',i?'':'date',date);b.onclick=()=>fetch('data/'+date+'.json',{cache:'no-store'}).then(r=>r.json()).then(render);document.querySelector('#dates').append(b)});return fetch('data/'+index.dates[0]+'.json',{cache:'no-store'})}).then(r=>r.json()).then(render);
+const selector=document.querySelector('#dates'), status=document.querySelector('#status'), older=document.querySelector('#older'), newer=document.querySelector('#newer');
+let dates=[], requestNumber=0;
+async function json(url){const response=await fetch(url,{cache:'no-store'});if(!response.ok)throw new Error('HTTP '+response.status);return response.json()}
+function nav(){const i=dates.indexOf(selector.value);older.disabled=i<0||i===dates.length-1;newer.disabled=i<=0}
+async function choose(date){const request=++requestNumber;stop();status.textContent='Loading briefing…';nav();try{const data=await json('data/'+date+'.json');if(request!==requestNumber)return;if(data.date!==date)throw new Error('Date mismatch');render(data);status.textContent=''}catch(error){if(request===requestNumber){document.querySelector('#content').innerHTML='';status.textContent='Could not load this briefing. Please refresh and try again.'}}}
+selector.onchange=()=>choose(selector.value);
+older.onclick=()=>{const i=dates.indexOf(selector.value);if(i>=0&&i<dates.length-1){selector.value=dates[i+1];choose(selector.value)}};
+newer.onclick=()=>{const i=dates.indexOf(selector.value);if(i>0){selector.value=dates[i-1];choose(selector.value)}};
+(async()=>{try{const index=await json('data/index.json');dates=[...new Set(index.dates.filter(d=>/^\\d{4}-\\d{2}-\\d{2}$/.test(d)))].sort().reverse();selector.replaceChildren();if(!dates.length){selector.append(new Option('No briefings yet',''));status.textContent='No briefings available yet.';nav();return}dates.forEach(date=>selector.append(new Option(date,date)));selector.disabled=false;selector.value=dates[0];await choose(dates[0])}catch(error){selector.replaceChildren(new Option('Dates unavailable',''));status.textContent='Could not load dates. Please refresh and try again.';nav()}})();
 </script>
 </body>
 </html>
