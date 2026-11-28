@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-25",
+  "items": [
+    {
+      "title": "N Brown selects Fynd for retail workflow automation",
+      "summary": [
+        "On 25 November, Fynd announced that UK fashion retailer N Brown had selected its Boltic platform to connect systems and automate workflows.",
+        "The planned implementation starts with Ambrose Wilson before extending to other N Brown brands."
+      ],
+      "why": "Retailers need reliable links between order, inventory and returns systems when modernising their technology.",
+      "language": [
+        {
+          "term": "select a platform",
+          "example": "The team selected a platform to manage candidate records."
+        },
+        {
+          "term": "connect disparate systems",
+          "example": "The project will connect disparate systems across the retail business."
+        }
+      ]
+    }
+  ],
+  "further": [
+    {
+      "term": "phase in a change",
+      "example": "We will phase in the new screening process."
+    },
+    {
+      "term": "map out dependencies",
+      "example": "The team mapped out dependencies before launch."
+    },
+    {
+      "term": "keep stakeholders informed",
+      "example": "Please keep stakeholders informed of the hiring timeline."
+    }
+  ]
+}
