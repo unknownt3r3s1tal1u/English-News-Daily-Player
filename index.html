@@ -38,7 +38,7 @@ async function choose(date){const request=++requestNumber;stop();status.textCont
 selector.onchange=()=>choose(selector.value);
 older.onclick=()=>{const i=dates.indexOf(selector.value);if(i>=0&&i<dates.length-1){selector.value=dates[i+1];choose(selector.value)}};
 newer.onclick=()=>{const i=dates.indexOf(selector.value);if(i>0){selector.value=dates[i-1];choose(selector.value)}};
-(async()=>{try{const index=await json('data/index.json');dates=[...new Set(index.dates.filter(d=>/^\\d{4}-\\d{2}-\\d{2}$/.test(d)))].sort().reverse();selector.replaceChildren();if(!dates.length){selector.append(new Option('No briefings yet',''));status.textContent='No briefings available yet.';nav();return}dates.forEach(date=>selector.append(new Option(date,date)));selector.disabled=false;selector.value=dates[0];await choose(dates[0])}catch(error){selector.replaceChildren(new Option('Dates unavailable',''));status.textContent='Could not load dates. Please refresh and try again.';nav()}})();
+(async()=>{try{const index=await json('data/index.json');dates=[...new Set(index.dates.filter(d=>/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(d)))].sort().reverse();selector.replaceChildren();if(!dates.length){selector.append(new Option('No briefings yet',''));status.textContent='No briefings available yet.';nav();return}dates.forEach(date=>selector.append(new Option(date,date)));selector.disabled=false;selector.value=dates[0];await choose(dates[0])}catch(error){selector.replaceChildren(new Option('Dates unavailable',''));status.textContent='Could not load dates. Please refresh and try again.';nav()}})();
 </script>
 </body>
 </html>
