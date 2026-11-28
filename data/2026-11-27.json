@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-27",
+  "items": [
+    {
+      "title": "TrueLayer reports an AI-agent bank-payment pilot with Papa John’s",
+      "summary": [
+        "On 27 November, TrueLayer said a Papa John’s AI agent completed a Pay by Bank payment during an FCA sandbox pilot involving UK banks.",
+        "According to TrueLayer, customers set spending limits with their bank; the announcement does not give a date for a general launch."
+      ],
+      "why": "The pilot tests how retailers might combine AI-assisted ordering with bank-enforced spending limits in a future checkout flow.",
+      "language": [
+        {
+          "term": "a spending limit",
+          "example": "The hiring manager set a spending limit for recruitment advertising."
+        },
+        {
+          "term": "conduct a pilot",
+          "example": "We will conduct a pilot before expanding the workflow to other teams."
+        },
+        {
+          "term": "on behalf of",
+          "example": "The recruiter contacted the candidate on behalf of the hiring manager."
+        }
+      ]
+    },
+    {
+      "title": "Middle East advertisers report plans to test ads on AI tools",
+      "summary": [
+        "In a 27 November release, EMARKETER said nearly half of surveyed Middle East ad buyers planned to place ads on AI tools within the next 12 months.",
+        "The survey involved 65 marketing and e-commerce professionals, so its findings should be read as a small-sample indication of intent rather than actual spending."
+      ],
+      "why": "For e-commerce teams, the findings point to another potential discovery channel while underlining the need to test reach and commercial return.",
+      "language": [
+        {
+          "term": "indicate an intention to",
+          "example": "Several candidates indicated an intention to relocate to London."
+        },
+        {
+          "term": "a small-sample survey",
+          "example": "The team treated the small-sample survey as an initial signal."
+        },
+        {
+          "term": "measure commercial return",
+          "example": "We need to measure commercial return before increasing the campaign budget."
+        }
+      ]
+    }
+  ],
+  "further": [
+    {
+      "term": "a workable alternative",
+      "example": "A video interview is a workable alternative when travel is difficult."
+    },
+    {
+      "term": "subject to approval",
+      "example": "The offer remains subject to approval from the hiring manager."
+    },
+    {
+      "term": "take effect after",
+      "example": "The revised process will take effect after the training session."
+    }
+  ]
+}
