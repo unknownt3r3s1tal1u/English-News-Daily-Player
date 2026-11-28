@@ -29,7 +29,7 @@ function render(data){stop();const root=document.querySelector('#content');root.
 function next(){if(!playing||position>=playlist.length){playing=false;fullPlayer=null;return}fullPlayer=new Audio(playlist[position++]);fullPlayer.onended=next;fullPlayer.onerror=next;fullPlayer.play().catch(()=>{playing=false})}
 document.querySelector('#all').onclick=()=>{stop();position=0;playing=true;next()};
 document.querySelector('#stop').onclick=stop;
-fetch('data/index.json').then(r=>r.json()).then(index=>{index.dates.forEach((date,i)=>{const b=el('button',i?'':'date',date);b.onclick=()=>fetch('data/'+date+'.json').then(r=>r.json()).then(render);document.querySelector('#dates').append(b)});return fetch('data/'+index.dates[0]+'.json')}).then(r=>r.json()).then(render);
+fetch('data/index.json',{cache:'no-store'}).then(r=>r.json()).then(index=>{index.dates.forEach((date,i)=>{const b=el('button',i?'':'date',date);b.onclick=()=>fetch('data/'+date+'.json',{cache:'no-store'}).then(r=>r.json()).then(render);document.querySelector('#dates').append(b)});return fetch('data/'+index.dates[0]+'.json',{cache:'no-store'})}).then(r=>r.json()).then(render);
 </script>
 </body>
 </html>
