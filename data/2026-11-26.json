@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-26",
+  "items": [
+    {
+      "title": "Sainsbury’s extends AI self-checkout prompts to convenience stores",
+      "summary": [
+        "A report published on 26 November said Sainsbury’s is introducing camera-based self-checkout prompts in its convenience stores after renewing its partnership with SAI.",
+        "The system flags possible missed scans and lets shoppers correct them; the companies say it already processes more than two million transactions a day in supermarkets."
+      ],
+      "why": "The expansion illustrates how retailers are applying computer vision to reduce checkout losses while trying to preserve a smooth customer experience.",
+      "language": [
+        {
+          "term": "roll out across",
+          "example": "The team plans to roll out the new checkout flow across its European stores."
+        },
+        {
+          "term": "flag a discrepancy",
+          "example": "The dashboard flags a discrepancy between stock records and actual inventory."
+        },
+        {
+          "term": "correct an error",
+          "example": "Candidates can correct an error before submitting their application."
+        }
+      ]
+    }
+  ],
+  "further": [
+    {
+      "term": "on a phased basis",
+      "example": "We will introduce the sourcing tool on a phased basis."
+    },
+    {
+      "term": "minimise disruption",
+      "example": "The team scheduled the migration overnight to minimise disruption."
+    },
+    {
+      "term": "put a process in place",
+      "example": "We need to put a process in place for tracking interview feedback."
+    }
+  ]
+}
