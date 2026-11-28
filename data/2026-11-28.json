@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-28",
+  "items": [
+    {
+      "title": "Meta’s Muse shopping agent launches in the UK",
+      "summary": [
+        "On 24 November, Retail Gazette reported that Meta had launched its Muse shopping assistant in the UK with retailers including JD Sports and ASOS.",
+        "The publication said the assistant can compare products and create baskets, while purchases require the customer’s approval."
+      ],
+      "why": "Retailers may need accurate product and stock data when customers discover products through AI assistants.",
+      "language": [
+        {
+          "term": "require customer approval",
+          "example": "The new payment process will require customer approval."
+        },
+        {
+          "term": "compare product options",
+          "example": "Candidates can compare product options during the demo."
+        }
+      ]
+    },
+    {
+      "title": "Adobe reports $9.7 billion in US Black Friday online spending by early evening",
+      "summary": [
+        "Reuters reported that Adobe Analytics measured $9.7 billion in US online spending by 6:30 p.m. Eastern Time on 27 November, up 12.8% from the same point a year earlier.",
+        "Adobe projected a final total of $13 billion to $13.4 billion; this was a forecast, not a completed sales figure."
+      ],
+      "why": "Intraday demand estimates help retailers assess checkout capacity and fulfilment needs during major promotions.",
+      "language": [
+        {
+          "term": "an intraday estimate",
+          "example": "We shared an intraday estimate of order volume."
+        },
+        {
+          "term": "be projected to reach",
+          "example": "Applications are projected to reach 200 by Friday."
+        }
+      ]
+    }
+  ],
+  "further": [
+    {
+      "term": "work within a budget",
+      "example": "The recruiter worked within a budget for advertising."
+    },
+    {
+      "term": "provide a timely update",
+      "example": "Please provide a timely update after each interview."
+    },
+    {
+      "term": "account for uncertainty",
+      "example": "Our hiring forecast should account for uncertainty."
+    }
+  ]
+}
